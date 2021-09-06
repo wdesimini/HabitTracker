@@ -9,14 +9,22 @@ import SwiftUI
 
 struct HabitTracksList: View {
     @State var habitsById: [UUID: Habit]
-    @State var habitTracks: [HabitTrack]
+    @State var habitTracksById: [UUID: HabitTrack]
     
     var body: some View {
-        List(habitTracks, id: \.id) {
+        List(sortedHabitTracks, id: \.id) {
             HabitTrackListItem(
                 habit: habitsById[$0.habitId]!,
                 habitTrack: $0
             )
+        }
+    }
+    
+    var sortedHabitTracks: [HabitTrack] {
+        habitTracksById.values.sorted { (lhs, rhs) -> Bool in
+            let lhsTitle = habitsById[lhs.habitId]?.title ?? ""
+            let rhsTitle = habitsById[rhs.habitId]?.title ?? ""
+            return lhsTitle < rhsTitle
         }
     }
 }
@@ -38,7 +46,7 @@ struct HabitTracksList_Previews: PreviewProvider {
         
         return HabitTracksList(
             habitsById: [habit.id: habit],
-            habitTracks: [habitTrack]
+            habitTracksById: [habitTrack.id: habitTrack]
         )
     }
 }
