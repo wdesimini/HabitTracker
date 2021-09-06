@@ -18,6 +18,7 @@
 		CF5C61B026E6CDB600BE2BD7 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C61AF26E6CDB600BE2BD7 /* Habit.swift */; };
 		CF5C61BA26E6CE1300BE2BD7 /* HabitTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C61B926E6CE1300BE2BD7 /* HabitTrack.swift */; };
 		CFF91D2B26E6CF640033A6E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF91D2A26E6CF640033A6E1 /* User.swift */; };
+		CFF91D3026E6CFB40033A6E1 /* HabitsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF91D2F26E6CFB40033A6E1 /* HabitsList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		CF5C61AF26E6CDB600BE2BD7 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		CF5C61B926E6CE1300BE2BD7 /* HabitTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTrack.swift; sourceTree = "<group>"; };
 		CFF91D2A26E6CF640033A6E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CFF91D2F26E6CFB40033A6E1 /* HabitsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				CF5C617C26E6CDA300BE2BD7 /* AppDelegate.swift */,
 				CF5C617E26E6CDA300BE2BD7 /* SceneDelegate.swift */,
 				CF5C618026E6CDA300BE2BD7 /* ContentView.swift */,
+				CFF91D2F26E6CFB40033A6E1 /* HabitsList.swift */,
 				CF5C61C126E6CE6300BE2BD7 /* Model */,
 				CF5C618226E6CDA400BE2BD7 /* Assets.xcassets */,
 				CF5C618726E6CDA400BE2BD7 /* LaunchScreen.storyboard */,
@@ -289,6 +292,7 @@
 				CF5C617F26E6CDA300BE2BD7 /* SceneDelegate.swift in Sources */,
 				CF5C61B026E6CDB600BE2BD7 /* Habit.swift in Sources */,
 				CF5C618126E6CDA300BE2BD7 /* ContentView.swift in Sources */,
+				CFF91D3026E6CFB40033A6E1 /* HabitsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Habit {
+struct Habit: Identifiable {
     let id: UUID
     var title: String
     let userId: UUID
