@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct HabitTrackListItem: View {
+    @State var date = Date()
     @State var habit: Habit
     @State var habitTrack: HabitTrack
+    let timer = Timer.publish(
+        every: 1, on: .main, in: .common
+    ).autoconnect()
     
     var body: some View {
         HStack {
@@ -17,10 +21,13 @@ struct HabitTrackListItem: View {
             Spacer()
             Text(secondsElapsedText)
         }
+        .onReceive(timer) {
+            date = $0
+        }
     }
     
     var secondsElapsed: Int {
-        Int(Date().timeIntervalSince1970 - habitTrack.start)
+        Int(date.timeIntervalSince1970 - habitTrack.start)
     }
     
     var secondsElapsedText: String {
@@ -43,6 +50,10 @@ struct HabitTrackListItem_Previews: PreviewProvider {
             start: Date().timeIntervalSince1970 - 3600
         )
         
-        return HabitTrackListItem(habit: habit, habitTrack: habitTrack)
+        return HabitTrackListItem(
+            date: Date(),
+            habit: habit,
+            habitTrack: habitTrack
+        )
     }
 }
