@@ -15,6 +15,9 @@
 		CF5C618926E6CDA400BE2BD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5C618726E6CDA400BE2BD7 /* LaunchScreen.storyboard */; };
 		CF5C619426E6CDA400BE2BD7 /* HabitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C619326E6CDA400BE2BD7 /* HabitTrackerTests.swift */; };
 		CF5C619F26E6CDA400BE2BD7 /* HabitTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C619E26E6CDA400BE2BD7 /* HabitTrackerUITests.swift */; };
+		CF5C61B026E6CDB600BE2BD7 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C61AF26E6CDB600BE2BD7 /* Habit.swift */; };
+		CF5C61BA26E6CE1300BE2BD7 /* HabitTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C61B926E6CE1300BE2BD7 /* HabitTrack.swift */; };
+		CFF91D2B26E6CF640033A6E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF91D2A26E6CF640033A6E1 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		CF5C619A26E6CDA400BE2BD7 /* HabitTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabitTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5C619E26E6CDA400BE2BD7 /* HabitTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTrackerUITests.swift; sourceTree = "<group>"; };
 		CF5C61A026E6CDA400BE2BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF5C61AF26E6CDB600BE2BD7 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		CF5C61B926E6CE1300BE2BD7 /* HabitTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTrack.swift; sourceTree = "<group>"; };
+		CFF91D2A26E6CF640033A6E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 				CF5C617C26E6CDA300BE2BD7 /* AppDelegate.swift */,
 				CF5C617E26E6CDA300BE2BD7 /* SceneDelegate.swift */,
 				CF5C618026E6CDA300BE2BD7 /* ContentView.swift */,
+				CF5C61C126E6CE6300BE2BD7 /* Model */,
 				CF5C618226E6CDA400BE2BD7 /* Assets.xcassets */,
 				CF5C618726E6CDA400BE2BD7 /* LaunchScreen.storyboard */,
 				CF5C618A26E6CDA400BE2BD7 /* Info.plist */,
@@ -134,6 +141,16 @@
 				CF5C61A026E6CDA400BE2BD7 /* Info.plist */,
 			);
 			path = HabitTrackerUITests;
+			sourceTree = "<group>";
+		};
+		CF5C61C126E6CE6300BE2BD7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF5C61AF26E6CDB600BE2BD7 /* Habit.swift */,
+				CF5C61B926E6CE1300BE2BD7 /* HabitTrack.swift */,
+				CFF91D2A26E6CF640033A6E1 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5C61BA26E6CE1300BE2BD7 /* HabitTrack.swift in Sources */,
 				CF5C617D26E6CDA300BE2BD7 /* AppDelegate.swift in Sources */,
+				CFF91D2B26E6CF640033A6E1 /* User.swift in Sources */,
 				CF5C617F26E6CDA300BE2BD7 /* SceneDelegate.swift in Sources */,
+				CF5C61B026E6CDB600BE2BD7 /* Habit.swift in Sources */,
 				CF5C618126E6CDA300BE2BD7 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
