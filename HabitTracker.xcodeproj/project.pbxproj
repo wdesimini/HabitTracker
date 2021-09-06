@@ -113,10 +113,7 @@
 			children = (
 				CF5C617C26E6CDA300BE2BD7 /* AppDelegate.swift */,
 				CF5C617E26E6CDA300BE2BD7 /* SceneDelegate.swift */,
-				CF5C618026E6CDA300BE2BD7 /* ContentView.swift */,
-				CFF91D2F26E6CFB40033A6E1 /* HabitsList.swift */,
-				CFF91D3426E6D0B70033A6E1 /* HabitTracksList.swift */,
-				CFF91D3926E6D3A20033A6E1 /* HabitTrackListItem.swift */,
+				CFF91D3E26E6D3F40033A6E1 /* View */,
 				CF5C61C126E6CE6300BE2BD7 /* Model */,
 				CF5C618226E6CDA400BE2BD7 /* Assets.xcassets */,
 				CF5C618726E6CDA400BE2BD7 /* LaunchScreen.storyboard */,
@@ -160,6 +157,17 @@
 				CFF91D2A26E6CF640033A6E1 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CFF91D3E26E6D3F40033A6E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF5C618026E6CDA300BE2BD7 /* ContentView.swift */,
+				CFF91D2F26E6CFB40033A6E1 /* HabitsList.swift */,
+				CFF91D3926E6D3A20033A6E1 /* HabitTrackListItem.swift */,
+				CFF91D3426E6D0B70033A6E1 /* HabitTracksList.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
