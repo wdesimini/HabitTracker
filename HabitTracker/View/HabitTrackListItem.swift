@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct HabitTrackListItem: View {
     @State var habit: Habit
     @State var habitTrack: HabitTrack
