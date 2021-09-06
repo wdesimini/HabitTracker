@@ -12,12 +12,21 @@ struct HabitTracksList: View {
     @State var habitTracksById: [UUID: HabitTrack]
     
     var body: some View {
-        List(sortedHabitTracks, id: \.id) {
-            HabitTrackListItem(
-                habit: habitsById[$0.habitId]!,
-                habitTrack: $0
-            )
+        VStack {
+            ForEach(sortedHabitTracks, id: \.id) {
+                HabitTrackListItem(
+                    habit: habitsById[$0.habitId]!,
+                    habitTrack: $0
+                )
+                .padding()
+            }
+            Button("Add Tracker", action: addTrackerTapped)
+            Spacer()
         }
+    }
+    
+    private func addTrackerTapped() {
+        
     }
     
     var sortedHabitTracks: [HabitTrack] {
