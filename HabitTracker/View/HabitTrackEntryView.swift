@@ -8,30 +8,29 @@
 import SwiftUI
 
 struct HabitTrackEntryView: View {
-    @State private var habit: Habit?
-    @Binding var habits: [Habit]
     let handler: (HabitTrack?) -> Void
-    @State private var newHabitTitle = ""
+    @State private var habitTitle = ""
     
     var body: some View {
         Form {
             Section(header: Text("Habit")) {
-                TextField("New Habit", text: $newHabitTitle)
-                
-                HabitsSelectableList(
-                    habits: habits,
-                    selectedHabit: $habit
-                )
+                TextField("New Habit", text: $habitTitle)
             }
             
             Button("Cancel", action: cancelTapped)
             
             Button("Start", action: startTapped)
-                .disabled(
-                    habit == nil
-                        && newHabitTitle.isEmpty
-                )
+                .disabled(habitTitle.isEmpty)
         }
+    }
+    
+    private func add(habit: Habit) {
+        #warning("tbd - handle failures here")
+        let manager = DataManager.shared
+        
+        let _ = manager.habitsDataService.execute(
+            request: .create(object: habit)
+        )
     }
     
     private func cancelTapped() {
@@ -39,21 +38,11 @@ struct HabitTrackEntryView: View {
     }
     
     private func startTapped() {
-        let habit: Habit
-        
-        if !newHabitTitle.isEmpty {
-            habit = Habit(
-                id: UUID(),
-                title: newHabitTitle,
-                userId: UUID()
-            )
-            
-            habits.append(habit)
-        } else if let selectedHabit = self.habit {
-            habit = selectedHabit
-        } else {
-            return
-        }
+        let habit = Habit(
+            id: UUID(),
+            title: habitTitle,
+            userId: UUID()
+        )
         
         let habitTrack = HabitTrack(
             end: nil,
@@ -62,18 +51,15 @@ struct HabitTrackEntryView: View {
             start: Date().timeIntervalSince1970
         )
         
+        add(habit: habit)
+        
         handler(habitTrack)
     }
 }
 
 struct HabitTrackEntryView_Previews: PreviewProvider {
-    @State static var habits = [
-        Habit(id: UUID(), title: "No Drink", userId: UUID()),
-        Habit(id: UUID(), title: "Wake Up Early", userId: UUID())
-    ]
-    
     static var previews: some View {
-        HabitTrackEntryView(habits: $habits) { _ in
+        HabitTrackEntryView() { _ in
             
         }
     }
