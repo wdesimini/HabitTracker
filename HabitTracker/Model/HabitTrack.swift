@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HabitTrack: Identifiable {
+struct HabitTrack: Identifiable, DataServiceable {
     var end: TimeInterval?
     let id: UUID
     let habitId: UUID

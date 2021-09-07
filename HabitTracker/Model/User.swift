@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User {
+struct User: DataServiceable {
     let id: UUID
     var habitIds: Set<UUID>
     var habitTrackIds: Set<UUID>
