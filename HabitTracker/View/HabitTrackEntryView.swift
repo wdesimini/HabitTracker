@@ -17,10 +17,13 @@ struct HabitTrackEntryView: View {
                 TextField("New Habit", text: $habitTitle)
             }
             
-            Button("Cancel", action: cancelTapped)
-            
-            Button("Start", action: startTapped)
-                .disabled(habitTitle.isEmpty)
+            HStack {
+                Button("Cancel", action: cancelTapped)
+                    .frame(maxWidth: .infinity)
+                Button("Start", action: startTapped)
+                    .disabled(habitTitle.isEmpty)
+                    .frame(maxWidth: .infinity)
+            }
         }
     }
     
