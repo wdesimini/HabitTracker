@@ -16,12 +16,12 @@ struct HabitsSelectableList: View {
             ForEach(habits, id: \.self) { habit in
                 HStack {
                     Text(habit.title)
-                    Image(
-                        systemName:
-                            habitIsSelected(habit)
-                            ? "checkmark.circle"
-                            : "cirlce"
-                    )
+                    
+                    Spacer()
+                    
+                    if habitIsSelected(habit) {
+                        Image(systemName: "checkmark.circle")
+                    }
                 }
                 .onTapGesture {
                     didSelect(habit: habit)
