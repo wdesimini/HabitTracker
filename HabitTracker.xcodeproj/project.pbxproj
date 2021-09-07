@@ -21,6 +21,8 @@
 		CFF91D3026E6CFB40033A6E1 /* HabitsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF91D2F26E6CFB40033A6E1 /* HabitsList.swift */; };
 		CFF91D3526E6D0B70033A6E1 /* HabitTracksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF91D3426E6D0B70033A6E1 /* HabitTracksList.swift */; };
 		CFF91D3A26E6D3A20033A6E1 /* HabitTrackListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF91D3926E6D3A20033A6E1 /* HabitTrackListItem.swift */; };
+		CFF91D4C26E6DB070033A6E1 /* HabitTrackEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF91D4B26E6DB070033A6E1 /* HabitTrackEntryView.swift */; };
+		CFF91D5426E6DDC70033A6E1 /* HabitsSelectableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF91D5326E6DDC70033A6E1 /* HabitsSelectableList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		CFF91D2F26E6CFB40033A6E1 /* HabitsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsList.swift; sourceTree = "<group>"; };
 		CFF91D3426E6D0B70033A6E1 /* HabitTracksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTracksList.swift; sourceTree = "<group>"; };
 		CFF91D3926E6D3A20033A6E1 /* HabitTrackListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTrackListItem.swift; sourceTree = "<group>"; };
+		CFF91D4B26E6DB070033A6E1 /* HabitTrackEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTrackEntryView.swift; sourceTree = "<group>"; };
+		CFF91D5326E6DDC70033A6E1 /* HabitsSelectableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsSelectableList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,8 @@
 			children = (
 				CF5C618026E6CDA300BE2BD7 /* ContentView.swift */,
 				CFF91D2F26E6CFB40033A6E1 /* HabitsList.swift */,
+				CFF91D5326E6DDC70033A6E1 /* HabitsSelectableList.swift */,
+				CFF91D4B26E6DB070033A6E1 /* HabitTrackEntryView.swift */,
 				CFF91D3926E6D3A20033A6E1 /* HabitTrackListItem.swift */,
 				CFF91D3426E6D0B70033A6E1 /* HabitTracksList.swift */,
 			);
@@ -308,6 +314,8 @@
 				CFF91D3526E6D0B70033A6E1 /* HabitTracksList.swift in Sources */,
 				CF5C61B026E6CDB600BE2BD7 /* Habit.swift in Sources */,
 				CF5C618126E6CDA300BE2BD7 /* ContentView.swift in Sources */,
+				CFF91D5426E6DDC70033A6E1 /* HabitsSelectableList.swift in Sources */,
+				CFF91D4C26E6DB070033A6E1 /* HabitTrackEntryView.swift in Sources */,
 				CFF91D3026E6CFB40033A6E1 /* HabitsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

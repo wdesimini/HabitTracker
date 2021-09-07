@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             username: "Willy"
         )
         let contentView = ContentView(
-            habitsById: habitsById,
+            habits: Array(habitsById.values),
             habitTracksById: habitTracksById,
             user: user
         )

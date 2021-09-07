@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var habitsById: [UUID: Habit]
+    @State var habits: [Habit]
     @State var habitTracksById: [UUID: HabitTrack]
     @State var user: User
     
@@ -19,7 +19,7 @@ struct ContentView: View {
             }
             Section(header: Text("Habit Tracks")) {
                 HabitTracksList(
-                    habitsById: habitsById,
+                    habits: habits,
                     habitTracksById: habitTracksById
                 )
             }
@@ -54,7 +54,7 @@ struct ContentView_Previews: PreviewProvider {
         )
         
         return ContentView(
-            habitsById: [habitId: habit],
+            habits: [habit],
             habitTracksById: [habitTrackId: habitTrack],
             user: user
         )

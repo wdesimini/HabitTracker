@@ -8,31 +8,45 @@
 import SwiftUI
 
 struct HabitTracksList: View {
-    @State var habitsById: [UUID: Habit]
+    @State var isShowingTrackerEntry = false
+    @State var habits: [Habit]
     @State var habitTracksById: [UUID: HabitTrack]
     
     var body: some View {
         VStack {
             ForEach(sortedHabitTracks, id: \.id) {
                 HabitTrackListItem(
-                    habit: habitsById[$0.habitId]!,
+                    habit: habit(with: $0.habitId)!,
                     habitTrack: $0
                 )
                 .padding()
             }
-            Button("Add Tracker", action: addTrackerTapped)
+            Button("Add Tracker") {
+                isShowingTrackerEntry = true
+            }
             Spacer()
+        }
+        .sheet(isPresented: $isShowingTrackerEntry) {
+            HabitTrackEntryView(habits: $habits) {
+                isShowingTrackerEntry = false
+                
+                guard let newHabitTrack = $0 else {
+                    return
+                }
+                
+                habitTracksById[newHabitTrack.id] = newHabitTrack
+            }
         }
     }
     
-    private func addTrackerTapped() {
-        
+    func habit(with id: UUID) -> Habit? {
+        habits.filter { $0.id == id }.first
     }
     
     var sortedHabitTracks: [HabitTrack] {
-        habitTracksById.values.sorted { (lhs, rhs) -> Bool in
-            let lhsTitle = habitsById[lhs.habitId]?.title ?? ""
-            let rhsTitle = habitsById[rhs.habitId]?.title ?? ""
+        habitTracksById.values.sorted {
+            let lhsTitle = habit(with: $0.habitId)?.title ?? ""
+            let rhsTitle = habit(with: $1.habitId)?.title ?? ""
             return lhsTitle < rhsTitle
         }
     }
@@ -54,7 +68,7 @@ struct HabitTracksList_Previews: PreviewProvider {
         )
         
         return HabitTracksList(
-            habitsById: [habit.id: habit],
+            habits: [habit],
             habitTracksById: [habitTrack.id: habitTrack]
         )
     }
