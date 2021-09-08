@@ -7,55 +7,47 @@
 
 import SwiftUI
 
-struct HabitTracksList: View {
+protocol HabitTracksListViewInput {
+    func show(isEnteringHabitTrack: Bool)
+}
+
+struct HabitTracksList<ViewModel: HabitTracksListViewModelInput>: View, HabitTracksListViewInput {
     @State var isShowingTrackerEntry = false
-    @ObservedObject var dataService = DataManager.shared
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
         VStack {
-            ForEach(sortedHabitTracks, id: \.id) {
+            ForEach(viewModel.habitTracks, id: \.id) {
                 HabitTrackListItem(
-                    habit: habit(with: $0.habitId)!,
+                    habit: viewModel.habit(trackedBy: $0),
                     habitTrack: $0
                 )
                 .padding()
             }
-            Button("Add Tracker") {
-                isShowingTrackerEntry = true
+            Button(viewModel.addTrackerButtonTitle) {
+                show(isEnteringHabitTrack: true)
             }
             Spacer()
         }
         .sheet(isPresented: $isShowingTrackerEntry) {
             HabitTrackEntryView {
-                isShowingTrackerEntry = false
-                
-                guard let newHabitTrack = $0 else {
-                    return
+                $0.flatMap {
+                    viewModel.add(habitTrack: $0)
                 }
                 
-                #warning("tbd - handle response here")
-                let _ = dataService.habitTracksDataService.execute(
-                    request: .create(object: newHabitTrack)
-                )
+                show(isEnteringHabitTrack: false)
             }
         }
     }
     
-    func habit(with id: UUID) -> Habit? {
-        dataService.habitsDataService.objectsById.values.filter { $0.id == id }.first
-    }
-    
-    var sortedHabitTracks: [HabitTrack] {
-        dataService.habitTracksDataService.objectsById.values.sorted {
-            let lhsTitle = habit(with: $0.habitId)?.title ?? ""
-            let rhsTitle = habit(with: $1.habitId)?.title ?? ""
-            return lhsTitle < rhsTitle
-        }
+    func show(isEnteringHabitTrack: Bool) {
+        isShowingTrackerEntry = isEnteringHabitTrack
     }
 }
 
 struct HabitTracksList_Previews: PreviewProvider {
     static var previews: some View {
-        HabitTracksList()
+        let viewModel = HabitTracksListViewModel()
+        return HabitTracksList(viewModel: viewModel)
     }
 }

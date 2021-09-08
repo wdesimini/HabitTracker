@@ -16,7 +16,7 @@ struct ContentView<ViewModel: ContentViewModelInput>: View {
                 Text(viewModel.username)
             }
             Section(header: Text(viewModel.habitTracksSectionTitle)) {
-                HabitTracksList()
+                HabitTracksList(viewModel: HabitTracksListViewModel())
             }
         }
     }
