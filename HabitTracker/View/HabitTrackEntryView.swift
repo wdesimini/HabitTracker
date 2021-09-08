@@ -7,63 +7,35 @@
 
 import SwiftUI
 
-struct HabitTrackEntryView: View {
-    let handler: (HabitTrack?) -> Void
-    @State private var habitTitle = ""
+struct HabitTrackEntryView<ViewModel: HabitTrackEntryViewModelInput>: View {
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
-        Form {
-            Section(header: Text("Habit")) {
-                TextField("New Habit", text: $habitTitle)
-            }
+        VStack {
+            TextField(
+                viewModel.habitTitleTextFieldPlaceholder,
+                text: $viewModel.habitTitle
+            )
             
-            HStack {
-                Button("Cancel", action: cancelTapped)
-                    .frame(maxWidth: .infinity)
-                Button("Start", action: startTapped)
-                    .disabled(habitTitle.isEmpty)
-                    .frame(maxWidth: .infinity)
-            }
+            Button(
+                viewModel.cancelButtonTitle,
+                action: viewModel.cancelHabitTrackEntry
+            )
+            .frame(width: 120, height: 54)
+            Button(
+                viewModel.startButtonTitle,
+                action: viewModel.startHabitTrack
+            )
+            .disabled(viewModel.startButtonIsDisabled)
+            .frame(width: 120, height: 54)
         }
-    }
-    
-    private func add(habit: Habit) {
-        #warning("tbd - handle failures here")
-        let manager = DataManager.shared
-        
-        let _ = manager.habitsDataService.execute(
-            request: .create(object: habit)
-        )
-    }
-    
-    private func cancelTapped() {
-        handler(nil)
-    }
-    
-    private func startTapped() {
-        let habit = Habit(
-            id: UUID(),
-            title: habitTitle,
-            userId: UUID()
-        )
-        
-        let habitTrack = HabitTrack(
-            end: nil,
-            id: UUID(),
-            habitId: habit.id,
-            start: Date().timeIntervalSince1970
-        )
-        
-        add(habit: habit)
-        
-        handler(habitTrack)
+        .padding()
     }
 }
 
 struct HabitTrackEntryView_Previews: PreviewProvider {
     static var previews: some View {
-        HabitTrackEntryView() { _ in
-            
-        }
+        let viewModel = HabitTrackEntryViewModel {}
+        return HabitTrackEntryView(viewModel: viewModel)
     }
 }

@@ -27,16 +27,15 @@ struct HabitTracksList<ViewModel: HabitTracksListViewModelInput>: View, HabitTra
             Button(viewModel.addTrackerButtonTitle) {
                 show(isEnteringHabitTrack: true)
             }
+            .frame(maxWidth: .infinity, minHeight: 54)
             Spacer()
         }
         .sheet(isPresented: $isShowingTrackerEntry) {
-            HabitTrackEntryView {
-                $0.flatMap {
-                    viewModel.add(habitTrack: $0)
+            HabitTrackEntryView(
+                viewModel: HabitTrackEntryViewModel {
+                    show(isEnteringHabitTrack: false)
                 }
-                
-                show(isEnteringHabitTrack: false)
-            }
+            )
         }
     }
     

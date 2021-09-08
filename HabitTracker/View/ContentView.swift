@@ -11,13 +11,20 @@ struct ContentView<ViewModel: ContentViewModelInput>: View {
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {
-        Form {
-            Section(header: Text(viewModel.userSectionTitle)) {
+        VStack {
+            VStack {
+                Text(viewModel.userSectionTitle)
+                    .padding(.vertical)
                 Text(viewModel.username)
             }
-            Section(header: Text(viewModel.habitTracksSectionTitle)) {
+            .padding()
+            
+            VStack {
+                Text(viewModel.habitTracksSectionTitle)
+                    .padding(.vertical)
                 HabitTracksList(viewModel: HabitTracksListViewModel())
             }
+            .padding()
         }
     }
 }
