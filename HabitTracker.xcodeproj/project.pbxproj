@@ -125,12 +125,11 @@
 		CF5C617B26E6CDA300BE2BD7 /* HabitTracker */ = {
 			isa = PBXGroup;
 			children = (
-				CF5C617C26E6CDA300BE2BD7 /* AppDelegate.swift */,
-				CF5C617E26E6CDA300BE2BD7 /* SceneDelegate.swift */,
+				CFB2BBC226E842F20033225A /* App */,
 				CFE420AF26E740870090CD6F /* Data */,
+				CF5C61C126E6CE6300BE2BD7 /* Model */,
 				CFF91D3E26E6D3F40033A6E1 /* View */,
 				CFE420C626E839790090CD6F /* ViewModel */,
-				CF5C61C126E6CE6300BE2BD7 /* Model */,
 				CF5C618226E6CDA400BE2BD7 /* Assets.xcassets */,
 				CF5C618726E6CDA400BE2BD7 /* LaunchScreen.storyboard */,
 				CF5C618A26E6CDA400BE2BD7 /* Info.plist */,
@@ -173,6 +172,15 @@
 				CFF91D2A26E6CF640033A6E1 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CFB2BBC226E842F20033225A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CF5C617C26E6CDA300BE2BD7 /* AppDelegate.swift */,
+				CF5C617E26E6CDA300BE2BD7 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		CFE420AF26E740870090CD6F /* Data */ = {
