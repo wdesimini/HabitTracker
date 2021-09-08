@@ -20,6 +20,7 @@
 		CFE4209526E7400B0090CD6F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE4209426E7400B0090CD6F /* DataManager.swift */; };
 		CFE4209A26E7401E0090CD6F /* DataServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE4209926E7401E0090CD6F /* DataServiceable.swift */; };
 		CFE420A226E7402F0090CD6F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE420A126E7402F0090CD6F /* DataService.swift */; };
+		CFE420BF26E839160090CD6F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE420BE26E839160090CD6F /* ContentViewModel.swift */; };
 		CFF91D2B26E6CF640033A6E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF91D2A26E6CF640033A6E1 /* User.swift */; };
 		CFF91D3026E6CFB40033A6E1 /* HabitsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF91D2F26E6CFB40033A6E1 /* HabitsList.swift */; };
 		CFF91D3526E6D0B70033A6E1 /* HabitTracksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF91D3426E6D0B70033A6E1 /* HabitTracksList.swift */; };
@@ -65,6 +66,7 @@
 		CFE4209426E7400B0090CD6F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CFE4209926E7401E0090CD6F /* DataServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceable.swift; sourceTree = "<group>"; };
 		CFE420A126E7402F0090CD6F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		CFE420BE26E839160090CD6F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		CFF91D2A26E6CF640033A6E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CFF91D2F26E6CFB40033A6E1 /* HabitsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsList.swift; sourceTree = "<group>"; };
 		CFF91D3426E6D0B70033A6E1 /* HabitTracksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTracksList.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				CF5C617E26E6CDA300BE2BD7 /* SceneDelegate.swift */,
 				CFE420AF26E740870090CD6F /* Data */,
 				CFF91D3E26E6D3F40033A6E1 /* View */,
+				CFE420C626E839790090CD6F /* ViewModel */,
 				CF5C61C126E6CE6300BE2BD7 /* Model */,
 				CF5C618226E6CDA400BE2BD7 /* Assets.xcassets */,
 				CF5C618726E6CDA400BE2BD7 /* LaunchScreen.storyboard */,
@@ -178,6 +181,14 @@
 				CFE4209926E7401E0090CD6F /* DataServiceable.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		CFE420C626E839790090CD6F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CFE420BE26E839160090CD6F /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		CFF91D3E26E6D3F40033A6E1 /* View */ = {
@@ -337,6 +348,7 @@
 				CFE4209A26E7401E0090CD6F /* DataServiceable.swift in Sources */,
 				CFF91D4C26E6DB070033A6E1 /* HabitTrackEntryView.swift in Sources */,
 				CFF91D3026E6CFB40033A6E1 /* HabitsList.swift in Sources */,
+				CFE420BF26E839160090CD6F /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,31 +7,24 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @ObservedObject var dataManager = DataManager.shared
+struct ContentView<ViewModel: ContentViewModelInput>: View {
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
         Form {
-            Section(header: Text("User")) {
-                Text(username)
+            Section(header: Text(viewModel.userSectionTitle)) {
+                Text(viewModel.username)
             }
-            Section(header: Text("Habit Tracks")) {
+            Section(header: Text(viewModel.habitTracksSectionTitle)) {
                 HabitTracksList()
             }
         }
-    }
-    
-    var user: User? {
-        dataManager.usersDataService.objectsById.values.first
-    }
-    
-    var username: String {
-        user?.username ?? "No User"
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let viewModel = ContentViewModel()
+        return ContentView(viewModel: viewModel)
     }
 }
