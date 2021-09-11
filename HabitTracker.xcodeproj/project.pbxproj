@@ -22,6 +22,7 @@
 		CF5C619F26E6CDA400BE2BD7 /* HabitTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C619E26E6CDA400BE2BD7 /* HabitTrackerUITests.swift */; };
 		CF5C61B026E6CDB600BE2BD7 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C61AF26E6CDB600BE2BD7 /* Habit.swift */; };
 		CF6B1FF626ED6BF70015E486 /* DataManager+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B1FF526ED6BF70015E486 /* DataManager+Preview.swift */; };
+		CF6B200926ED74950015E486 /* HabitsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B200826ED74950015E486 /* HabitsListModel.swift */; };
 		CFB2BBCA26E84A770033225A /* HabitStreakEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB2BBC926E84A770033225A /* HabitStreakEntryViewModel.swift */; };
 		CFE4209526E7400B0090CD6F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE4209426E7400B0090CD6F /* DataManager.swift */; };
 		CFE4209A26E7401E0090CD6F /* DataServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE4209926E7401E0090CD6F /* DataServiceable.swift */; };
@@ -75,6 +76,7 @@
 		CF5C61A026E6CDA400BE2BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF5C61AF26E6CDB600BE2BD7 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		CF6B1FF526ED6BF70015E486 /* DataManager+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+Preview.swift"; sourceTree = "<group>"; };
+		CF6B200826ED74950015E486 /* HabitsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsListModel.swift; sourceTree = "<group>"; };
 		CFB2BBC926E84A770033225A /* HabitStreakEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStreakEntryViewModel.swift; sourceTree = "<group>"; };
 		CFE4209426E7400B0090CD6F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CFE4209926E7401E0090CD6F /* DataServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceable.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				CFE420BE26E839160090CD6F /* ContentViewModel.swift */,
 				CFB2BBC926E84A770033225A /* HabitStreakEntryViewModel.swift */,
 				CFE420CD26E841C70090CD6F /* HabitStreaksListViewModel.swift */,
+				CF6B200826ED74950015E486 /* HabitsListModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				CFE4209526E7400B0090CD6F /* DataManager.swift in Sources */,
 				CF6B1FF626ED6BF70015E486 /* DataManager+Preview.swift in Sources */,
 				CF011F4426ED01F7005814FF /* DatabaseService.swift in Sources */,
+				CF6B200926ED74950015E486 /* HabitsListModel.swift in Sources */,
 				CF5C617D26E6CDA300BE2BD7 /* AppDelegate.swift in Sources */,
 				CFF91D2B26E6CF640033A6E1 /* User.swift in Sources */,
 				CF5C617F26E6CDA300BE2BD7 /* SceneDelegate.swift in Sources */,

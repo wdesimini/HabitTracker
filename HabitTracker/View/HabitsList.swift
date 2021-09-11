@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct HabitsList: View {
-    @State var habits: [Habit]
+struct HabitsList<ViewModel: HabitsListModel>: View {
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
-        List(habits, id: \.id) { habit in
+        List(viewModel.habits, id: \.id) { habit in
             Text(habit.title)
         }
     }
@@ -19,15 +19,9 @@ struct HabitsList: View {
 
 struct HabitsList_Previews: PreviewProvider {
     static var previews: some View {
-        HabitsList(
-            habits: [
-                Habit(
-                    id: UUID(),
-                    streakIds: Set<UUID>(),
-                    title: "Brush Teeth",
-                    userId: UUID()
-                )
-            ]
-        )
+        let data = DataManager.preview
+        let user = data.usersDataService.currentUser!
+        let viewModel = HabitsListModel(data: data, userId: user.id)
+        return HabitsList(viewModel: viewModel)
     }
 }
