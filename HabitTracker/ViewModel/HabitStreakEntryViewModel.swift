@@ -1,5 +1,5 @@
 //
-//  HabitTrackEntryViewModel.swift
+//  HabitStreakEntryViewModel.swift
 //  HabitTracker
 //
 //  Created by Wilson Desimini on 9/7/21.
@@ -8,7 +8,7 @@
 import Combine
 import SwiftUI
 
-protocol HabitTrackEntryViewModelInput: ObservableObject {
+protocol HabitStreakEntryViewModelInput: ObservableObject {
     var cancelButtonTitle: String { get }
     var habitSectionTitle: String { get }
     var habitTitle: String { get set }
@@ -22,7 +22,7 @@ protocol HabitTrackEntryViewModelInput: ObservableObject {
     func startHabitTrack()
 }
 
-class HabitTrackEntryViewModel: HabitTrackEntryViewModelInput {
+class HabitStreakEntryViewModel: HabitStreakEntryViewModelInput {
     private let dismissHandler: () -> Void
     var habitTitle = "" {
         didSet {
@@ -55,32 +55,33 @@ class HabitTrackEntryViewModel: HabitTrackEntryViewModelInput {
         dismissHandler()
     }
     
-    private func save(habit: Habit, habitTrack: HabitTrack) {
+    private func save(habit: Habit, streak: Habit.Streak) {
         let manager = DataManager.shared
         
         let _ = manager.habitsDataService.execute(
             request: .create(object: habit)
         )
         
-        let _ = manager.habitTracksDataService.execute(
-            request: .create(object: habitTrack)
+        let _ = manager.streaksDataService.execute(
+            request: .create(object: streak)
         )
     }
     
     func startHabitTrack() {
+        let streak = Habit.Streak(
+            end: nil,
+            id: UUID(),
+            start: Date().timeIntervalSince1970
+        )
+        #warning("tbd - load user id here, or take user id out of habit objects?")
         let habit = Habit(
             id: UUID(),
+            streakIds: Set([streak.id]),
             title: habitTitle,
             userId: UUID()
         )
-        let habitTrack = HabitTrack(
-            end: nil,
-            id: UUID(),
-            habitId: habit.id,
-            start: Date().timeIntervalSince1970
-        )
         
-        save(habit: habit, habitTrack: habitTrack)
+        save(habit: habit, streak: streak)
         
         dismissHandler()
     }

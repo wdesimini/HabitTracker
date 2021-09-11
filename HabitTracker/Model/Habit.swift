@@ -9,6 +9,7 @@ import Foundation
 
 struct Habit: Hashable, Identifiable, DataServiceable {
     let id: UUID
+    var streakIds: Set<UUID>
     var title: String
     let userId: UUID
 }

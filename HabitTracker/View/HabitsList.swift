@@ -23,6 +23,7 @@ struct HabitsList_Previews: PreviewProvider {
             habits: [
                 Habit(
                     id: UUID(),
+                    streakIds: Set<UUID>(),
                     title: "Brush Teeth",
                     userId: UUID()
                 )

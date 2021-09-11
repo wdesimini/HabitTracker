@@ -1,5 +1,5 @@
 //
-//  HabitTrackEntryView.swift
+//  HabitStreakEntryView.swift
 //  HabitTracker
 //
 //  Created by Wilson Desimini on 9/6/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HabitTrackEntryView<ViewModel: HabitTrackEntryViewModelInput>: View {
+struct HabitStreakEntryView<ViewModel: HabitStreakEntryViewModelInput>: View {
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {
@@ -35,7 +35,7 @@ struct HabitTrackEntryView<ViewModel: HabitTrackEntryViewModelInput>: View {
 
 struct HabitTrackEntryView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = HabitTrackEntryViewModel {}
-        return HabitTrackEntryView(viewModel: viewModel)
+        let viewModel = HabitStreakEntryViewModel {}
+        return HabitStreakEntryView(viewModel: viewModel)
     }
 }

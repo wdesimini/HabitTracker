@@ -7,32 +7,32 @@
 
 import SwiftUI
 
-protocol HabitTracksListViewInput {
+protocol HabitStreaksListViewInput {
     func show(isEnteringHabitTrack: Bool)
 }
 
-struct HabitTracksList<ViewModel: HabitTracksListViewModelInput>: View, HabitTracksListViewInput {
+struct HabitTracksList<ViewModel: HabitStreaksListViewModelInput>: View, HabitStreaksListViewInput {
     @State var isShowingTrackerEntry = false
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {
         VStack {
-            ForEach(viewModel.habitTracks, id: \.id) {
-                HabitTrackListItem(
-                    habit: viewModel.habit(trackedBy: $0),
-                    habitTrack: $0
+            ForEach(viewModel.streaks, id: \.id) {
+                HabitStreakListItem(
+                    habit: viewModel.habit,
+                    streak: $0
                 )
                 .padding()
             }
-            Button(viewModel.addTrackerButtonTitle) {
+            Button(viewModel.addStreakButtonTitle) {
                 show(isEnteringHabitTrack: true)
             }
             .frame(maxWidth: .infinity, minHeight: 54)
             Spacer()
         }
         .sheet(isPresented: $isShowingTrackerEntry) {
-            HabitTrackEntryView(
-                viewModel: HabitTrackEntryViewModel {
+            HabitStreakEntryView(
+                viewModel: HabitStreakEntryViewModel {
                     show(isEnteringHabitTrack: false)
                 }
             )
@@ -46,7 +46,13 @@ struct HabitTracksList<ViewModel: HabitTracksListViewModelInput>: View, HabitTra
 
 struct HabitTracksList_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = HabitTracksListViewModel()
+        let habit = Habit(
+            id: UUID(),
+            streakIds: Set<UUID>(),
+            title: "No Drink",
+            userId: UUID()
+        )
+        let viewModel = HabitStreaksListViewModel(habit: habit)
         return HabitTracksList(viewModel: viewModel)
     }
 }

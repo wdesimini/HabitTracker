@@ -45,8 +45,8 @@ struct HabitsSelectableList_Previews: PreviewProvider {
     static var previews: some View {
         HabitsSelectableList(
             habits: [
-                Habit(id: UUID(), title: "No Drink", userId: UUID()),
-                Habit(id: UUID(), title: "Wake Up Early", userId: UUID())
+                Habit(id: UUID(), streakIds: Set<UUID>(), title: "No Drink", userId: UUID()),
+                Habit(id: UUID(), streakIds: Set<UUID>(), title: "Wake Up Early", userId: UUID())
             ],
             selectedHabit: $selectedHabit
         )
