@@ -20,4 +20,12 @@ class DataManager: ObservableObject {
         habitTracksDataService = DataService<HabitTrack>(localService: localDatabaseService)
         usersDataService = DataService<User>(localService: localDatabaseService)
     }
+    
+    func resetData() throws {
+        for key in UserDefaults.Key.allCases {
+            UserDefaults.standard.removeObject(forKey: key.rawValue)
+        }
+        
+        try FileManager.default.deleteDocumentsDirectoryContents()
+    }
 }
