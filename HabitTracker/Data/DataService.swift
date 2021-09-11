@@ -46,6 +46,11 @@ struct DataService<T: DataServiceable> {
         
         return response
     }
+    
+    mutating func load(objectId: UUID) throws {
+        let object: T? = try localService.read(fileWithId: objectId)
+        objectsById[objectId] = object
+    }
 }
 
 extension DataService {
