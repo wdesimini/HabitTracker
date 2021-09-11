@@ -9,6 +9,7 @@ import Combine
 import SwiftUI
 
 protocol ContentViewModelInput: ObservableObject {
+    var addButtonTitle: String { get }
     var currentStreaksSectionTitle: String { get }
     var dataManager: DataManager { get }
     var habitsListViewModel: HabitsListModel { get }
@@ -32,6 +33,10 @@ class ContentViewModel: ContentViewModelInput {
         }
         
         bind()
+    }
+    
+    var addButtonTitle: String {
+        "Add"
     }
     
     var currentStreaksSectionTitle: String {

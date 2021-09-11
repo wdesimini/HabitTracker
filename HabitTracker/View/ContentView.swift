@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView<ViewModel: ContentViewModelInput>: View {
+    @State var isAddingHabit = false
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {
@@ -19,9 +20,16 @@ struct ContentView<ViewModel: ContentViewModelInput>: View {
             }
             .padding()
             
-            VStack {
-                Text(viewModel.currentStreaksSectionTitle)
-                    .padding(.vertical)
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(viewModel.currentStreaksSectionTitle)
+                        .padding(.vertical)
+                    Spacer()
+                    Button(
+                        viewModel.addButtonTitle,
+                        action: addHabit
+                    )
+                }
                 HabitsList(
                     viewModel: HabitsListModel(
                         data: viewModel.dataManager,
@@ -31,6 +39,13 @@ struct ContentView<ViewModel: ContentViewModelInput>: View {
             }
             .padding()
         }
+        .sheet(isPresented: $isAddingHabit) {
+            
+        }
+    }
+    
+    private func addHabit() {
+        isAddingHabit = true
     }
 }
 
