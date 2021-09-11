@@ -34,7 +34,7 @@ struct ContentView<ViewModel: ContentViewModelInput>: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = ContentViewModel()
+        let viewModel = ContentViewModel(dataManager: .preview)
         return ContentView(viewModel: viewModel)
     }
 }

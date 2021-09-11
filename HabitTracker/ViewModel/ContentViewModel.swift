@@ -15,11 +15,13 @@ protocol ContentViewModelInput: ObservableObject {
 }
 
 class ContentViewModel: ContentViewModelInput {
-    @ObservedObject private var dataManager = DataManager.shared
+    @ObservedObject private var dataManager: DataManager
     @Published private var user: User?
-    private var userobserver: AnyCancellable?
+    private var userObserver: AnyCancellable?
     
-    init() {
+    init(dataManager: DataManager = .shared) {
+        self.dataManager = dataManager
+        
         do {
             try dataManager.usersDataService.loadUser()
         } catch {
@@ -42,10 +44,9 @@ class ContentViewModel: ContentViewModelInput {
     }
     
     private func bind() {
-        userobserver =
+        userObserver =
             dataManager.$usersDataService.sink { [weak self] in
-                let userId = UserDefaults.standard.userId!
-                self?.user = $0.objectsById[userId]
+                self?.user = $0.currentUser
             }
     }
 }

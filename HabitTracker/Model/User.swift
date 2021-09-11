@@ -10,6 +10,5 @@ import Foundation
 struct User: DataServiceable {
     let id: UUID
     var habitIds: Set<UUID>
-    var habitTrackIds: Set<UUID>
     var username: String
 }
