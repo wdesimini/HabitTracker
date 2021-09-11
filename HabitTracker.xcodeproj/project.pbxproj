@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF011F3126ED00D8005814FF /* FileManager+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF011F3026ED00D8005814FF /* FileManager+Service.swift */; };
+		CF011F4426ED01F7005814FF /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF011F4326ED01F7005814FF /* DatabaseService.swift */; };
 		CF5C617D26E6CDA300BE2BD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C617C26E6CDA300BE2BD7 /* AppDelegate.swift */; };
 		CF5C617F26E6CDA300BE2BD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C617E26E6CDA300BE2BD7 /* SceneDelegate.swift */; };
 		CF5C618126E6CDA300BE2BD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C618026E6CDA300BE2BD7 /* ContentView.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		CF011F3026ED00D8005814FF /* FileManager+Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Service.swift"; sourceTree = "<group>"; };
+		CF011F4326ED01F7005814FF /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		CF5C617926E6CDA300BE2BD7 /* HabitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5C617C26E6CDA300BE2BD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF5C617E26E6CDA300BE2BD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		CFE420AF26E740870090CD6F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				CF011F4326ED01F7005814FF /* DatabaseService.swift */,
 				CFE4209426E7400B0090CD6F /* DataManager.swift */,
 				CFE420A126E7402F0090CD6F /* DataService.swift */,
 				CFE4209926E7401E0090CD6F /* DataServiceable.swift */,
@@ -356,6 +359,7 @@
 				CFE420CE26E841C70090CD6F /* HabitTracksListViewModel.swift in Sources */,
 				CFE420A226E7402F0090CD6F /* DataService.swift in Sources */,
 				CFE4209526E7400B0090CD6F /* DataManager.swift in Sources */,
+				CF011F4426ED01F7005814FF /* DatabaseService.swift in Sources */,
 				CF5C617D26E6CDA300BE2BD7 /* AppDelegate.swift in Sources */,
 				CFF91D2B26E6CF640033A6E1 /* User.swift in Sources */,
 				CF5C617F26E6CDA300BE2BD7 /* SceneDelegate.swift in Sources */,

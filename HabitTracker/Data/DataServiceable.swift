@@ -10,3 +10,9 @@ import Foundation
 protocol DataServiceable: Codable {
     var id: UUID { get }
 }
+
+extension DataServiceable {
+    static var directoryName: String {
+        String(describing: self)
+    }
+}

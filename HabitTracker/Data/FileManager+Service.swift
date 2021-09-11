@@ -7,9 +7,13 @@
 
 import Foundation
 
-extension FileManager {
+extension FileManager: DatabaseService {
     
     // MARK: Utility
+    
+    func appDirectory() throws -> URL {
+        try documentsDirectoryURL()
+    }
     
     func directoryExists(at url: URL) -> Bool {
         var isDirectory: ObjCBool = false
