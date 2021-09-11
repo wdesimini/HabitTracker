@@ -20,12 +20,14 @@ struct ContentView<ViewModel: ContentViewModelInput>: View {
             .padding()
             
             VStack {
-                Text(viewModel.habitTracksSectionTitle)
+                Text(viewModel.currentStreaksSectionTitle)
                     .padding(.vertical)
-                #warning("tbd - replace this")
-//                HabitTracksList(
-//                    viewModel: HabitStreaksListViewModel()
-//                )
+                HabitsList(
+                    viewModel: HabitsListModel(
+                        data: viewModel.dataManager,
+                        userId: viewModel.userId
+                    )
+                )
             }
             .padding()
         }

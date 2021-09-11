@@ -9,13 +9,16 @@ import Combine
 import SwiftUI
 
 protocol ContentViewModelInput: ObservableObject {
-    var habitTracksSectionTitle: String { get }
+    var currentStreaksSectionTitle: String { get }
+    var dataManager: DataManager { get }
+    var habitsListViewModel: HabitsListModel { get }
+    var userId: UUID { get }
     var username: String { get }
     var userSectionTitle: String { get }
 }
 
 class ContentViewModel: ContentViewModelInput {
-    @ObservedObject private var dataManager: DataManager
+    @ObservedObject var dataManager: DataManager
     @Published private var user: User?
     private var userObserver: AnyCancellable?
     
@@ -31,8 +34,19 @@ class ContentViewModel: ContentViewModelInput {
         bind()
     }
     
-    var habitTracksSectionTitle: String {
-        "Habit Tracks"
+    var currentStreaksSectionTitle: String {
+        "Current Habit Streaks"
+    }
+    
+    var habitsListViewModel: HabitsListModel {
+        HabitsListModel(
+            data: dataManager,
+            userId: user?.id ?? UUID()
+        )
+    }
+    
+    var userId: UUID {
+        user?.id ?? UUID()
     }
     
     var username: String {

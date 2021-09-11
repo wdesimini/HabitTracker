@@ -8,9 +8,13 @@
 import Combine
 import SwiftUI
 
-class HabitsListModel: ObservableObject {
+protocol HabitsListModelInput: ObservableObject {
+    var habits: [Habit] { get }
+}
+
+class HabitsListModel: HabitsListModelInput {
     @ObservedObject var data: DataManager
-    @Published var habits: [Habit]
+    @Published private(set) var habits: [Habit]
     private let userId: UUID
     private var observer: AnyCancellable?
     
