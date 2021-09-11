@@ -8,7 +8,7 @@
 import Foundation
 
 extension UserDefaults {
-    private enum Key: String {
+    enum Key: String, CaseIterable {
         case userId
     }
     

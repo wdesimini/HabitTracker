@@ -15,7 +15,7 @@ struct DataService<T: DataServiceable> {
     }
     
     var objectsById = [UUID: T]()
-    var localService: DatabaseService = FileManager.default
+    var localService: DatabaseService
     
     mutating func execute(request: Request) -> Response {
         var response = Response()
