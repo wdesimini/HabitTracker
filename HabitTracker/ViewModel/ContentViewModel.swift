@@ -20,7 +20,12 @@ class ContentViewModel: ContentViewModelInput {
     private var userobserver: AnyCancellable?
     
     init() {
-        try? dataManager.loadUser()
+        do {
+            try dataManager.usersDataService.loadUser()
+        } catch {
+            print(error)
+        }
+        
         bind()
     }
     

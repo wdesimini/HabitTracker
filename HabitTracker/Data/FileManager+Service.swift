@@ -50,6 +50,13 @@ extension FileManager: DatabaseService {
     
     func create<T: Encodable>(file: T, at url: URL) throws {
         let data = try JSONEncoder().encode(file)
+        
+        let directoryURL = self.directoryURL(of: url)!
+        
+        if !directoryExists(at: directoryURL) {
+            try create(directoryAt: directoryURL)
+        }
+        
         createFile(atPath: url.path, contents: data)
     }
     
