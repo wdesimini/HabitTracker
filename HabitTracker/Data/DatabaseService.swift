@@ -30,6 +30,7 @@ extension DatabaseService {
     func read<T: DataServiceable>(fileWithId fileId: UUID) throws -> T? {
         let url = try appDirectory()
             .appendingPathComponent(T.directoryName)
+            .appendingPathComponent(fileId.uuidString)
         return try read(fileAt: url)
     }
     
