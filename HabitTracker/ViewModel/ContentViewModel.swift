@@ -20,6 +20,7 @@ class ContentViewModel: ContentViewModelInput {
     private var userobserver: AnyCancellable?
     
     init() {
+        try? dataManager.loadUser()
         bind()
     }
     
@@ -38,8 +39,8 @@ class ContentViewModel: ContentViewModelInput {
     private func bind() {
         userobserver =
             dataManager.$usersDataService.sink { [weak self] in
-                let users = $0.objectsById.values
-                self?.user = users.first
+                let userId = UserDefaults.standard.userId!
+                self?.user = $0.objectsById[userId]
             }
     }
 }
