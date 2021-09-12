@@ -10,6 +10,7 @@ import SwiftUI
 
 protocol HabitsListModelInput: ObservableObject {
     var habits: [Habit] { get }
+    func currentStreak(habit: Habit) -> Habit.Streak?
 }
 
 class HabitsListModel: HabitsListModelInput {
@@ -41,5 +42,11 @@ class HabitsListModel: HabitsListModelInput {
             let habitsById = self.data.habitsDataService.objectsById
             self.habits = habitIds.compactMap { habitsById[$0] }
         }
+    }
+    
+    func currentStreak(habit: Habit) -> Habit.Streak? {
+        let streaksById = data.streaksDataService.objectsById
+        let streaks = habit.streakIds.compactMap { streaksById[$0] }
+        return streaks.sorted { $0.start < $1.start }.first
     }
 }

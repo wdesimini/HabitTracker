@@ -7,12 +7,15 @@
 
 import SwiftUI
 
-struct HabitsList<ViewModel: HabitsListModel>: View {
+struct HabitsList<ViewModel: HabitsListModelInput>: View {
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {
         List(viewModel.habits, id: \.id) { habit in
-            Text(habit.title)
+            HabitsListItem(
+                habit: habit,
+                currentStreak: viewModel.currentStreak(habit: habit)
+            )
         }
     }
 }
