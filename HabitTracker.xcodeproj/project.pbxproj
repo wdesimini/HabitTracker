@@ -24,17 +24,14 @@
 		CF6B1FF626ED6BF70015E486 /* DataManager+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B1FF526ED6BF70015E486 /* DataManager+Preview.swift */; };
 		CF6B200926ED74950015E486 /* HabitsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B200826ED74950015E486 /* HabitsListModel.swift */; };
 		CF6B201626ED79D80015E486 /* HabitsListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B201526ED79D80015E486 /* HabitsListItem.swift */; };
-		CFB2BBCA26E84A770033225A /* HabitStreakEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB2BBC926E84A770033225A /* HabitStreakEntryViewModel.swift */; };
+		CF6B201E26EE525D0015E486 /* HabitEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B201D26EE525D0015E486 /* HabitEntryView.swift */; };
+		CF6B202626EE585A0015E486 /* HabitEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B202526EE585A0015E486 /* HabitEntryViewModel.swift */; };
 		CFE4209526E7400B0090CD6F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE4209426E7400B0090CD6F /* DataManager.swift */; };
 		CFE4209A26E7401E0090CD6F /* DataServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE4209926E7401E0090CD6F /* DataServiceable.swift */; };
 		CFE420A226E7402F0090CD6F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE420A126E7402F0090CD6F /* DataService.swift */; };
 		CFE420BF26E839160090CD6F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE420BE26E839160090CD6F /* ContentViewModel.swift */; };
-		CFE420CE26E841C70090CD6F /* HabitStreaksListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE420CD26E841C70090CD6F /* HabitStreaksListViewModel.swift */; };
 		CFF91D2B26E6CF640033A6E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF91D2A26E6CF640033A6E1 /* User.swift */; };
 		CFF91D3026E6CFB40033A6E1 /* HabitsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF91D2F26E6CFB40033A6E1 /* HabitsList.swift */; };
-		CFF91D3526E6D0B70033A6E1 /* HabitTracksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF91D3426E6D0B70033A6E1 /* HabitTracksList.swift */; };
-		CFF91D3A26E6D3A20033A6E1 /* HabitStreakListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF91D3926E6D3A20033A6E1 /* HabitStreakListItem.swift */; };
-		CFF91D4C26E6DB070033A6E1 /* HabitStreakEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF91D4B26E6DB070033A6E1 /* HabitStreakEntryView.swift */; };
 		CFF91D5426E6DDC70033A6E1 /* HabitsSelectableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF91D5326E6DDC70033A6E1 /* HabitsSelectableList.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,17 +76,14 @@
 		CF6B1FF526ED6BF70015E486 /* DataManager+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+Preview.swift"; sourceTree = "<group>"; };
 		CF6B200826ED74950015E486 /* HabitsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsListModel.swift; sourceTree = "<group>"; };
 		CF6B201526ED79D80015E486 /* HabitsListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsListItem.swift; sourceTree = "<group>"; };
-		CFB2BBC926E84A770033225A /* HabitStreakEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStreakEntryViewModel.swift; sourceTree = "<group>"; };
+		CF6B201D26EE525D0015E486 /* HabitEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitEntryView.swift; sourceTree = "<group>"; };
+		CF6B202526EE585A0015E486 /* HabitEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitEntryViewModel.swift; sourceTree = "<group>"; };
 		CFE4209426E7400B0090CD6F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CFE4209926E7401E0090CD6F /* DataServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceable.swift; sourceTree = "<group>"; };
 		CFE420A126E7402F0090CD6F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		CFE420BE26E839160090CD6F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
-		CFE420CD26E841C70090CD6F /* HabitStreaksListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStreaksListViewModel.swift; sourceTree = "<group>"; };
 		CFF91D2A26E6CF640033A6E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CFF91D2F26E6CFB40033A6E1 /* HabitsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsList.swift; sourceTree = "<group>"; };
-		CFF91D3426E6D0B70033A6E1 /* HabitTracksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTracksList.swift; sourceTree = "<group>"; };
-		CFF91D3926E6D3A20033A6E1 /* HabitStreakListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStreakListItem.swift; sourceTree = "<group>"; };
-		CFF91D4B26E6DB070033A6E1 /* HabitStreakEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStreakEntryView.swift; sourceTree = "<group>"; };
 		CFF91D5326E6DDC70033A6E1 /* HabitsSelectableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsSelectableList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,8 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				CFE420BE26E839160090CD6F /* ContentViewModel.swift */,
-				CFB2BBC926E84A770033225A /* HabitStreakEntryViewModel.swift */,
-				CFE420CD26E841C70090CD6F /* HabitStreaksListViewModel.swift */,
+				CF6B202526EE585A0015E486 /* HabitEntryViewModel.swift */,
 				CF6B200826ED74950015E486 /* HabitsListModel.swift */,
 			);
 			path = ViewModel;
@@ -229,12 +222,10 @@
 			isa = PBXGroup;
 			children = (
 				CF5C618026E6CDA300BE2BD7 /* ContentView.swift */,
+				CF6B201D26EE525D0015E486 /* HabitEntryView.swift */,
 				CFF91D2F26E6CFB40033A6E1 /* HabitsList.swift */,
 				CF6B201526ED79D80015E486 /* HabitsListItem.swift */,
 				CFF91D5326E6DDC70033A6E1 /* HabitsSelectableList.swift */,
-				CFF91D4B26E6DB070033A6E1 /* HabitStreakEntryView.swift */,
-				CFF91D3926E6D3A20033A6E1 /* HabitStreakListItem.swift */,
-				CFF91D3426E6D0B70033A6E1 /* HabitTracksList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -369,8 +360,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFB2BBCA26E84A770033225A /* HabitStreakEntryViewModel.swift in Sources */,
-				CFE420CE26E841C70090CD6F /* HabitStreaksListViewModel.swift in Sources */,
 				CFE420A226E7402F0090CD6F /* DataService.swift in Sources */,
 				CFE4209526E7400B0090CD6F /* DataManager.swift in Sources */,
 				CF6B1FF626ED6BF70015E486 /* DataManager+Preview.swift in Sources */,
@@ -380,17 +369,16 @@
 				CF5C617D26E6CDA300BE2BD7 /* AppDelegate.swift in Sources */,
 				CFF91D2B26E6CF640033A6E1 /* User.swift in Sources */,
 				CF5C617F26E6CDA300BE2BD7 /* SceneDelegate.swift in Sources */,
-				CFF91D3A26E6D3A20033A6E1 /* HabitStreakListItem.swift in Sources */,
-				CFF91D3526E6D0B70033A6E1 /* HabitTracksList.swift in Sources */,
 				CF5C61B026E6CDB600BE2BD7 /* Habit.swift in Sources */,
 				CF011F5F26ED4CEC005814FF /* HabitStreak.swift in Sources */,
 				CF011F5726ED113D005814FF /* DataService+User.swift in Sources */,
+				CF6B202626EE585A0015E486 /* HabitEntryViewModel.swift in Sources */,
 				CF011F3126ED00D8005814FF /* FileManager+Service.swift in Sources */,
 				CF5C618126E6CDA300BE2BD7 /* ContentView.swift in Sources */,
 				CFF91D5426E6DDC70033A6E1 /* HabitsSelectableList.swift in Sources */,
 				CFE4209A26E7401E0090CD6F /* DataServiceable.swift in Sources */,
 				CF011F4F26ED0A63005814FF /* UserDefaults+Service.swift in Sources */,
-				CFF91D4C26E6DB070033A6E1 /* HabitStreakEntryView.swift in Sources */,
+				CF6B201E26EE525D0015E486 /* HabitEntryView.swift in Sources */,
 				CFF91D3026E6CFB40033A6E1 /* HabitsList.swift in Sources */,
 				CFE420BF26E839160090CD6F /* ContentViewModel.swift in Sources */,
 			);

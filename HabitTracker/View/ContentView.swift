@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView<ViewModel: ContentViewModelInput>: View {
-    @State var isAddingHabit = false
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {
@@ -27,20 +26,22 @@ struct ContentView<ViewModel: ContentViewModelInput>: View {
                     Spacer()
                     Button(
                         viewModel.addButtonTitle,
-                        action: addHabit
+                        action: viewModel.addHabitTapped
                     )
+                    .padding()
                 }
                 habitsList()
             }
             .padding()
         }
-        .sheet(isPresented: $isAddingHabit) {
-            
+        .sheet(isPresented: $viewModel.isAddingHabit) {
+            habitEntryView()
         }
     }
     
-    private func addHabit() {
-        isAddingHabit = true
+    private func habitEntryView() -> HabitEntryView<HabitEntryViewModel> {
+        let viewModel = self.viewModel.habitEntryViewModel
+        return HabitEntryView(viewModel: viewModel)
     }
     
     private func habitsList() -> HabitsList<HabitsListModel> {
