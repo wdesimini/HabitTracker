@@ -14,11 +14,13 @@ struct HabitView<ViewModel: HabitViewModelInput>: View {
         VStack {
             Text(viewModel.habitTitle)
                 .font(.title)
-            List(viewModel.habitStreaks, id:\.id) { streak in
-                Text("streak")
-            }
-            .padding()
+            streaksList()
         }
+    }
+    
+    private func streaksList() -> HabitStreaksList<HabitStreaksListModel> {
+        let viewModel = self.viewModel.streaksListModel
+        return HabitStreaksList(viewModel: viewModel)
     }
 }
 

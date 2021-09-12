@@ -28,6 +28,8 @@
 		CF6B202626EE585A0015E486 /* HabitEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B202526EE585A0015E486 /* HabitEntryViewModel.swift */; };
 		CF6B204226EE604A0015E486 /* HabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B204126EE604A0015E486 /* HabitView.swift */; };
 		CF6B204A26EE636C0015E486 /* HabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B204926EE636C0015E486 /* HabitViewModel.swift */; };
+		CF6B205226EE64130015E486 /* HabitStreaksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B205126EE64130015E486 /* HabitStreaksList.swift */; };
+		CF6B205A26EE67520015E486 /* HabitStreaksListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B205926EE67520015E486 /* HabitStreaksListModel.swift */; };
 		CFE4209526E7400B0090CD6F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE4209426E7400B0090CD6F /* DataManager.swift */; };
 		CFE4209A26E7401E0090CD6F /* DataServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE4209926E7401E0090CD6F /* DataServiceable.swift */; };
 		CFE420A226E7402F0090CD6F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE420A126E7402F0090CD6F /* DataService.swift */; };
@@ -82,6 +84,8 @@
 		CF6B202526EE585A0015E486 /* HabitEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitEntryViewModel.swift; sourceTree = "<group>"; };
 		CF6B204126EE604A0015E486 /* HabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitView.swift; sourceTree = "<group>"; };
 		CF6B204926EE636C0015E486 /* HabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewModel.swift; sourceTree = "<group>"; };
+		CF6B205126EE64130015E486 /* HabitStreaksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStreaksList.swift; sourceTree = "<group>"; };
+		CF6B205926EE67520015E486 /* HabitStreaksListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStreaksListModel.swift; sourceTree = "<group>"; };
 		CFE4209426E7400B0090CD6F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CFE4209926E7401E0090CD6F /* DataServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceable.swift; sourceTree = "<group>"; };
 		CFE420A126E7402F0090CD6F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 				CFE420BE26E839160090CD6F /* ContentViewModel.swift */,
 				CF6B202526EE585A0015E486 /* HabitEntryViewModel.swift */,
 				CF6B200826ED74950015E486 /* HabitsListModel.swift */,
+				CF6B205926EE67520015E486 /* HabitStreaksListModel.swift */,
 				CF6B204926EE636C0015E486 /* HabitViewModel.swift */,
 			);
 			path = ViewModel;
@@ -231,6 +236,7 @@
 				CFF91D2F26E6CFB40033A6E1 /* HabitsList.swift */,
 				CF6B201526ED79D80015E486 /* HabitsListItem.swift */,
 				CFF91D5326E6DDC70033A6E1 /* HabitsSelectableList.swift */,
+				CF6B205126EE64130015E486 /* HabitStreaksList.swift */,
 				CF6B204126EE604A0015E486 /* HabitView.swift */,
 			);
 			path = View;
@@ -368,7 +374,9 @@
 			files = (
 				CFE420A226E7402F0090CD6F /* DataService.swift in Sources */,
 				CFE4209526E7400B0090CD6F /* DataManager.swift in Sources */,
+				CF6B205226EE64130015E486 /* HabitStreaksList.swift in Sources */,
 				CF6B1FF626ED6BF70015E486 /* DataManager+Preview.swift in Sources */,
+				CF6B205A26EE67520015E486 /* HabitStreaksListModel.swift in Sources */,
 				CF6B201626ED79D80015E486 /* HabitsListItem.swift in Sources */,
 				CF011F4426ED01F7005814FF /* DatabaseService.swift in Sources */,
 				CF6B200926ED74950015E486 /* HabitsListModel.swift in Sources */,

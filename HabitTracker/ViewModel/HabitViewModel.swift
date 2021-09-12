@@ -11,6 +11,7 @@ import SwiftUI
 protocol HabitViewModelInput: ObservableObject {
     var habitStreaks: [Habit.Streak] { get }
     var habitTitle: String { get }
+    var streaksListModel: HabitStreaksListModel { get }
 }
 
 class HabitViewModel: HabitViewModelInput {
@@ -30,6 +31,10 @@ class HabitViewModel: HabitViewModelInput {
         self.habitStreaks = habit.streakIds.compactMap { streaksById[$0] }
         self.habitTitle = habit.title
         bind()
+    }
+    
+    var streaksListModel: HabitStreaksListModel {
+        HabitStreaksListModel(streaks: habitStreaks)
     }
     
     private func bind() {
