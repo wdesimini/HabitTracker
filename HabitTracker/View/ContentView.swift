@@ -30,12 +30,7 @@ struct ContentView<ViewModel: ContentViewModelInput>: View {
                         action: addHabit
                     )
                 }
-                HabitsList(
-                    viewModel: HabitsListModel(
-                        data: viewModel.dataManager,
-                        userId: viewModel.userId
-                    )
-                )
+                habitsList()
             }
             .padding()
         }
@@ -46,6 +41,11 @@ struct ContentView<ViewModel: ContentViewModelInput>: View {
     
     private func addHabit() {
         isAddingHabit = true
+    }
+    
+    private func habitsList() -> HabitsList<HabitsListModel> {
+        let viewModel = self.viewModel.habitsListViewModel
+        return HabitsList(viewModel: viewModel)
     }
 }
 
