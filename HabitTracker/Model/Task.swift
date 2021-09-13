@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Task {
+struct Task: DataServiceable {
     let added: TimeInterval
     var due: TimeInterval?
     let id: UUID

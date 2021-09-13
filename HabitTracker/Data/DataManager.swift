@@ -13,12 +13,14 @@ class DataManager: ObservableObject {
     
     @Published var habitsDataService: DataService<Habit>
     @Published var streaksDataService: DataService<Habit.Streak>
+    @Published var tasksDataService: DataService<Task>
     @Published var usersDataService: DataService<User>
     
     private init(preview: Bool = false) {
         let localDatabaseService = preview ? nil : FileManager.default
         habitsDataService = DataService<Habit>(localService: localDatabaseService)
         streaksDataService = DataService<Habit.Streak>(localService: localDatabaseService)
+        tasksDataService = DataService<Task>(localService: localDatabaseService)
         usersDataService = DataService<User>(localService: localDatabaseService)
         
         if preview {

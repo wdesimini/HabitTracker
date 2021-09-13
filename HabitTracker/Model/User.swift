@@ -10,5 +10,6 @@ import Foundation
 struct User: DataServiceable {
     let id: UUID
     var habitIds: Set<UUID>
+    var taskIds: Set<UUID>
     var username: String
 }

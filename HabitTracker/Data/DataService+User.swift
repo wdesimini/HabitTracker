@@ -24,6 +24,7 @@ extension DataService where T == User {
         let user = User(
             id: UUID(),
             habitIds: Set<UUID>(),
+            taskIds: Set<UUID>(),
             username: ""
         )
         
