@@ -15,6 +15,7 @@ protocol ContentViewModelInput: ObservableObject {
     var habitEntryViewModel: HabitEntryViewModel { get }
     var habitsListViewModel: HabitsListModel { get }
     var isAddingHabit: Bool { get set }
+    var tasksListModel: TasksListModel { get }
     var userId: UUID { get }
     var username: String { get }
     var userSectionTitle: String { get }
@@ -55,6 +56,13 @@ class ContentViewModel: ContentViewModelInput {
     
     var habitsListViewModel: HabitsListModel {
         HabitsListModel(
+            data: dataManager,
+            userId: user?.id ?? UUID()
+        )
+    }
+    
+    var tasksListModel: TasksListModel {
+        TasksListModel(
             data: dataManager,
             userId: user?.id ?? UUID()
         )

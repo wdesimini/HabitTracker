@@ -18,6 +18,9 @@ struct ContentView<ViewModel: ContentViewModelInput>: View {
                 Text(viewModel.username)
             }
             .padding()
+            VStack(alignment: .leading) {
+                tasksList()
+            }
             
             VStack(alignment: .leading) {
                 HStack {
@@ -47,6 +50,11 @@ struct ContentView<ViewModel: ContentViewModelInput>: View {
     private func habitsList() -> HabitsList<HabitsListModel> {
         let viewModel = self.viewModel.habitsListViewModel
         return HabitsList(viewModel: viewModel)
+    }
+    
+    private func tasksList() -> TasksList<TasksListModel> {
+        let viewModel = self.viewModel.tasksListModel
+        return TasksList(viewModel: viewModel)
     }
 }
 
